@@ -35,7 +35,7 @@
     border-radius: 50%;
   } 
 .editor {
-    height: 99%;
+    height: 99% !important;
 }
 
 .output {

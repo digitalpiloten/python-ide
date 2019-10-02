@@ -34,3 +34,19 @@ function runit() {
        console.log(err.toString());
    });
 }
+
+function downloadPython() {
+    const url = window.URL.createObjectURL(new Blob([
+        editor.getValue()
+    ], {
+        type: "text/plain"
+    }));
+    const a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = url;
+    // the filename you want
+    a.download = 'python.py';
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+}

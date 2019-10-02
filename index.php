@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Python</title>
         <link rel="stylesheet" type="text/css" href="https://libs.digitalpiloten.org/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="app.css">
+        <!--<link rel="stylesheet" type="text/css" href="https://libs.digitalpiloten.org/bootswatch/darkly/1.0.0/bootstrap.min.css">-->
+        <link rel="stylesheet" type="text/css" href="app.css" id="stylesheet">
     </head>
     <body>
         <div class="split left">
@@ -33,6 +34,8 @@
                     <div class="canvas" id="canvas"></div>
                 </div>
             </div>
+            <hr style="width:97%;">
+            <button style="width:99%;" type="button" class="btn btn-primary" onclick="downloadPython()">Download</button>
         </div> 
         <form>
         </form>
