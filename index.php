@@ -31,9 +31,9 @@
         <link rel="stylesheet" type="text/css" href="<?= $theme_css ?>">
         <link rel="stylesheet" type="text/css" href="app.css" id="stylesheet">
     </head>
-    <body>
-        <div class="split left">
-            <div class="editor" id="editor"></div>
+    <body style="height:100% !important;">
+        <div class="split left" style="height:100% !important;">
+            <div class="editor" id="editor" style="height:100% !important;"></div>
         </div>
             
         <div class="split right">
