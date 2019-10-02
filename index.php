@@ -43,6 +43,7 @@
             }
         ?>
         <link rel="stylesheet" type="text/css" href="<?= $theme_css ?>">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="app.css" id="stylesheet">
     </head>
     <body style="height:100% !important;">
@@ -71,7 +72,16 @@
                 </div>
             </div>
             <hr style="width:97%;">
-            <button style="width:99%;" type="button" class="btn btn-primary" onclick="downloadPython()">Download</button>
+            <div class="row" style="width:99%;">
+                <div class="col-9">
+                    <button style="width:100%;" type="button" class="btn btn-primary" onclick="downloadPython()">Download</button>
+                </div>
+                <div class="col-3">
+                    <a href="/settings" class="btn btn-secondary">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                </div>
+            </div>
         </div> 
         <form>
         </form>
