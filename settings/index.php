@@ -52,7 +52,7 @@
     </head>
     <body style="height:100% !important;">
         <div class="container">
-            <h1>Settings</h1>
+            <h1><a href="/" class="btn btn-secondary">< Back</a> Settings</h1>
             <a
                 class="btn btn-primary"
                 href="?theme=<?= $other_theme ?>"
