@@ -6,10 +6,22 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Python</title>
         <?php
+            $check_cookies = true;
             $theme = "light";
             $theme_css = "";
             $vscode_theme = "vs";
-            if(isset($_COOKIE["theme"])) {
+            if(isset($_GET["theme"])) {
+                if($_GET["theme"] == "light") {
+                    $theme = "light";
+                    $check_cookies = false;
+                    setcookie("theme", "light");
+                } else if($_GET["theme"] == "dark") {
+                    $theme = "dark";
+                    $check_cookies = false;
+                    setcookie("theme", "dark");
+                }
+            }
+            if($check_cookies && isset($_COOKIE["theme"])) {
                 if($_COOKIE["theme"] == "light") {
                     $theme = "light";
                 } else if($_COOKIE["theme"] == "dark") {
