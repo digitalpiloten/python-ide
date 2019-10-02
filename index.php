@@ -76,7 +76,7 @@
                 <div class="col-9">
                     <button style="width:100%;" type="button" class="btn btn-primary" onclick="downloadPython()">Download</button>
                 </div>
-                <div class="col-3">
+                <div class="col-lg">
                     <a href="/settings" class="btn btn-secondary">
                         <i class="fas fa-cog"></i>
                     </a>
