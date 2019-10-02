@@ -24,19 +24,21 @@
                     setcookie("theme", "dark", null, "/");
                 }
             }
-            if($check_cookies && isset($_COOKIE["theme"])) {
-                if($_COOKIE["theme"] == "light") {
-                    $theme = "light";
-                    $other_theme = "dark";
-                } else if($_COOKIE["theme"] == "dark") {
-                    $theme = "dark";
-                    $other_theme = "light";
+            if($check_cookies) {
+                if(isset($_COOKIE["theme"])) {
+                    if($_COOKIE["theme"] == "light") {
+                        $theme = "light";
+                        $other_theme = "dark";
+                    } else if($_COOKIE["theme"] == "dark") {
+                        $theme = "dark";
+                        $other_theme = "light";
+                    } else {
+                        $theme = "light";
+                        $other_theme = "dark";
+                    }
                 } else {
-                    $theme = "light";
-                    $other_theme = "dark";
-                }
-            } else {
-                setcookie("theme", "light", null, "/");
+                    setcookie("theme", "light", null, "/");
+                }    
             }
             if($theme == "light") {
                 $theme_css = "https://libs.digitalpiloten.org/bootstrap/4.3.1/css/bootstrap.min.css";

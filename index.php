@@ -21,16 +21,18 @@
                     setcookie("theme", "dark", null, "/");
                 }
             }
-            if($check_cookies && isset($_COOKIE["theme"])) {
-                if($_COOKIE["theme"] == "light") {
-                    $theme = "light";
-                } else if($_COOKIE["theme"] == "dark") {
-                    $theme = "dark";
+            if($check_cookies) {
+                if(isset($_COOKIE["theme"])) {
+                    if($_COOKIE["theme"] == "light") {
+                        $theme = "light";
+                    } else if($_COOKIE["theme"] == "dark") {
+                        $theme = "dark";
+                    } else {
+                        $theme = "light";
+                    }
                 } else {
-                    $theme = "light";
+                    setcookie("theme", "light", null, "/");
                 }
-            } else {
-                setcookie("theme", "light", null, "/");
             }
             if($theme == "light") {
                 $theme_css = "https://libs.digitalpiloten.org/bootstrap/4.3.1/css/bootstrap.min.css";
