@@ -8,6 +8,7 @@
         <?php
             $theme = "light";
             $theme_css = "";
+            $vscode_theme = "vs";
             if(isset($_COOKIE["theme"])) {
                 if($_COOKIE["theme"] == "light") {
                     $theme = "light";
@@ -21,8 +22,10 @@
             }
             if($theme == "light") {
                 $theme_css = "https://libs.digitalpiloten.org/bootstrap/4.3.1/css/bootstrap.min.css";
+                $vscode_theme = "vs";
             } else if($theme == "dark") {
                 $theme_css = "https://libs.digitalpiloten.org/bootswatch/darkly/1.0.0/bootstrap.min.css";
+                $vscode_theme = "vs-dark";
             }
         ?>
         <link rel="stylesheet" type="text/css" href="<?= $theme_css ?>">
@@ -62,6 +65,16 @@
         <script type="application/javascript" src="https://libs.digitalpiloten.org/skulpt/0.0.1/skulpt.min.js"></script> 
         <script type="application/javascript" src="https://libs.digitalpiloten.org/skulpt/0.0.1/skulpt-stdlib.js"></script> 
         <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.18.0/min/vs/loader.js"></script>
+        <script type="application/javascript">
+            require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.18.0/min/vs' }});
+            require(['vs/editor/editor.main'], function() {
+                editor = monaco.editor.create(document.getElementById("editor"), {
+                    value: 'print("Hello World!")',
+                    language: "python",
+                    theme: "<?= $vscode_theme ?>"
+                });
+            });
+        </script>
         <script type="application/javascript" src="app.js"></script>
         <script type="application/javascript" src="https://libs.digitalpiloten.org/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </body>
