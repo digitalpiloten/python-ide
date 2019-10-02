@@ -18,7 +18,7 @@
                 } else if($_GET["theme"] == "dark") {
                     $theme = "dark";
                     $check_cookies = false;
-                    setcookie("theme", "dark");
+                    setcookie("theme", "dark", null, "/");
                 }
             }
             if($check_cookies && isset($_COOKIE["theme"])) {
@@ -30,7 +30,7 @@
                     $theme = "light";
                 }
             } else {
-                setcookie("theme", "light");
+                setcookie("theme", "light", null, "/");
             }
             if($theme == "light") {
                 $theme_css = "https://libs.digitalpiloten.org/bootstrap/4.3.1/css/bootstrap.min.css";

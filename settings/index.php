@@ -16,12 +16,12 @@
                     $theme = "light";
                     $other_theme = "dark";
                     $check_cookies = false;
-                    setcookie("theme", "light");
+                    setcookie("theme", "light", null, "/");
                 } else if($_GET["theme"] == "dark") {
                     $theme = "dark";
                     $other_theme = "light";
                     $check_cookies = false;
-                    setcookie("theme", "dark");
+                    setcookie("theme", "dark", null, "/");
                 }
             }
             if($check_cookies && isset($_COOKIE["theme"])) {
@@ -36,7 +36,7 @@
                     $other_theme = "dark";
                 }
             } else {
-                setcookie("theme", "light");
+                setcookie("theme", "light", null, "/");
             }
             if($theme == "light") {
                 $theme_css = "https://libs.digitalpiloten.org/bootstrap/4.3.1/css/bootstrap.min.css";
