@@ -5,14 +5,20 @@
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Python</title>
+        <link rel="stylesheet" type="text/css" href="app.css">
     </head>
-    <body>         
-        <form> 
-        <div id="editor" style="height:250px;"></div><br /> 
-        <button type="button" onclick="runit()">Run</button> 
-        </form> 
-        <pre id="output"></pre> 
-        <div id="canvas"></div> 
+    <body>
+        <div class="split left">
+            <div class="editor" id="editor"></div>
+        </div>
+            
+        <div class="split right">
+            <button type="button" onclick="runit()">Run</button> 
+            <pre class="output" id="output"></pre> 
+            <div class="canvas" id="canvas"></div>
+        </div> 
+        <form>
+        </form>
         <script type="application/javascript" src="https://libs.digitalpiloten.org/jquery/3.4.1/jquery.min.js"></script>
         <script type="application/javascript" src="https://libs.digitalpiloten.org/skulpt/0.0.1/skulpt.min.js"></script> 
         <script type="application/javascript" src="https://libs.digitalpiloten.org/skulpt/0.0.1/skulpt-stdlib.js"></script> 
